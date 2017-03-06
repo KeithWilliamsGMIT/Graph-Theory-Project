@@ -42,6 +42,16 @@ All data is a Neo4J database is represented as one of the following five:
 ### Finding a solution
 
 #### What functionality is required?
+Before developing a solution, its important to define what functionality this system should offer. The following is a list of proposed functions for such a system.
+
++ CRUD operations for students group, lecturers and rooms.
++ Show available rooms at a given time.
++ Show timetable for student group.
++ Show timetable for lecturer.
++ Show timetable for room.
++ Show alternative times and rooms for a given class. The times must suit both the lecturers and student groups timetable and the room must have an adequate capacity and equipment.
+
+These functions must be considered when modeling this problem with Neo4J.
 
 #### Using graph theory to model this problem
 
