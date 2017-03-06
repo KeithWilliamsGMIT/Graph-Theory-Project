@@ -24,10 +24,20 @@ Before trying to solve the timetabling system problem it is important to first u
 All data is a Neo4J database is represented as one of the following five:
 
 1. Nodes
-2. Relationships
-3. Relationship types
-4. Labels
+	
+	A node in Neo4J is similar to a record in a relational database.
+2. Labels
+	
+	Nodes can have labels. Labels are used to associate a set of nodes. Nodes with the same label are grouped together. In a relational database labels would be equivalent to tables.
+3. Relationships
+	
+	Relationships are what connect the nodes in the graph. Neo4J is a multi-directional graph meaning the relationships, or edges, have direction, but it can be ignored in queries, and there can be more than one relationship between any two nodes. Relationships can be compared to joins in relational databases, but because they are predefined it is much faster.
+4. Relationship types
+	
+	Relationship types are used to describe how to nodes are related. This is usually a verb. Relationship types are mandatory in Neo4J.
 5. Properties
+	
+	Properties are key-value pairs that store data in nodes and relationships. As mentioned before, Neo4J is schemaless, therefore each node or relationship can have different properties even if they have the same labels or relationship types. Properties are similar to columns in relational databases.
 
 ### Finding a solution
 
