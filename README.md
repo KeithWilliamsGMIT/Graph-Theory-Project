@@ -12,7 +12,7 @@ This problem gets more difficult when considering the constraints on each resour
 + Some classes may require extra equipment which will also determine what room they will be allocated.
 + Student groups and lecturers need breaks between a certain number of classes.
 
-All these factors make it very difficulat to find a solution to the timetabling problem.
+All these factors make it very difficult to find a solution to the timetabling problem.
 
 ### Understanding Neo4J
 Before trying to solve the timetabling system problem it is important to first understand Neo4J and how it works.
@@ -52,6 +52,22 @@ Before developing a solution, its important to define what functionality this sy
 + Show alternative times and rooms for a given class. The times must suit both the lecturers and student groups timetable and the room must have an adequate capacity and equipment.
 
 These functions must be considered when modeling this problem with Neo4J.
+
+#### What data needs to be stored?
+Analysing both the problem, and current GMIT timetabling system, helped determine what data this system needs to be stored
+
++ Rooms
+	
+	Rooms will be identified by room numbers. Every room has a capacity and a type, such as lecture room, computer room and so on.
++ Student groups
+	
+	Student groups will be identified by a combination of their course code and group name. Each student group will have a different size that must be accounted for. However, it is not necessary to store all student data.
++ Lecturers
+	
+	Lecturers will be identified by their staff ID and their working hours should be stored.
++ Classes
+	
+	Classes will have a module name and will be identified by a combination of the timeslot and day for which it is scheduled. Classes will also have a type which will correspond with the type of classroom is required.
 
 #### Using graph theory to model this problem
 
