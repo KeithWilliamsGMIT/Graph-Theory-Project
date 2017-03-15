@@ -61,13 +61,37 @@ Analysing both the problem, and current GMIT timetabling system, helped determin
 	Rooms will be identified by room numbers. Every room has a capacity and a type, such as lecture room, computer room and so on.
 + Student groups
 	
-	Student groups will be identified by a combination of their course code and group name. Each student group will have a different size that must be accounted for. However, it is not necessary to store all student data.
+	Student groups will be identified by a combination of their course code and group name. Each student group will have a different size that must be accounted for. However, it is not necessary to store all students as separate nodes.
 + Lecturers
 	
 	Lecturers will be identified by their staff ID and their working hours should be stored.
 + Classes
 	
 	Classes will have a module name and will be identified by a combination of the timeslot and day for which it is scheduled. Classes will also have a type which will correspond with the type of classroom is required.
+	
+#### Researching other solutions
+Before trying to solve this problem I researched solutions and techniques proposed by others to solve this problem. The following is what I found.
+
+##### Graph Colouring
+This seemed to be a very common approach when dealing with the timetabling problem. It can be divided into vertex and edge colouring.
+
+1. Vertex colouring
+	It is a way of colouring the vertices of a graph such that no two adjacent vertices share the same colour.
+
+2. Edge colouring
+	It is a way of colouring the edges of a graph such that no two adjacent edges share the same colour.
+
+"Colouring" a vertex or edge simply means giving it a label. Many algorithms exist to colour a graph with the minimum amount of colours. This is called the chromatic number. In relation to the timetabling problem, vertex colouring can be used to create a graph like the following.
+
+![An example of a coloured graph](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/3-coloringEx.svg/160px-3-coloringEx.svg.png)
+
+In this graph the vertices could represent classes. The edges could represent conflicts between classes. For example, if two classes share the same room, student group or lecturer. The colours could represent the timeslot in which that particular class is scheduled for. When constructing the timetable graph we know that in order to avoid a conflict we must not connect two nodes of the same colour. The maximum amount of colours the graph can have in this case is equal to the number of timeslots available.
+
+Sources: *[Wikipedia](https://en.wikipedia.org/wiki/Graph_coloring)*
+
+##### Tabu Search
+
+##### Genetic algorithm
 
 #### Using graph theory to model this problem
 
