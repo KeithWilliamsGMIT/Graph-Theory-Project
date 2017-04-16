@@ -89,11 +89,18 @@ In this graph the vertices could represent classes. The edges could represent co
 
 Sources: *[Wikipedia](https://en.wikipedia.org/wiki/Graph_coloring)*
 
-##### Tabu Search
-
-##### Genetic algorithm
-
 #### Using graph theory to model this problem
+Given the list of data given above that needs to be stored, it seems intuitive to make the bullet points nodes and labels in the graph and the data in the paragraphs properties of those nodes. Therefore there will be four labels which are Room, Group, Lecturer and Class.
+
+Then the problem emerges how to connect or relate these nodes to each other. This is less straight forward. At first glance it seems that all nodes should be connected to a Class node. An example of these relationships might be as follows.
+
++ Room HOSTS Class
++ Group ATTENDS Class
++ Lecturer TEACHES Class
+
+This design utilises all of the data structures offered by Neo4J except for relationship properties. In this solution the direction would be used to indicate a resource that is ALLOCATED TO a class. The simplicity of this approach would offer a lot of flexibility, for example, it doesn't restrict more than one lecturer from teaching the same module.
+
+This design would also making querying student, lecturer and room timetables very easy as only adjacent Class nodes will make up their timetable as those are the only classes they are allocated to.
 
 ### Obtaining the data
 
