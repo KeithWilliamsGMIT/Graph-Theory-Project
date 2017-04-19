@@ -1,7 +1,18 @@
 # Graph-Theory-Project
+
+This document is divided into seven sections
+1. [Understanding the problem](#s1)
+2. [Understanding the problem](#s2)
+3. [Understanding Neo4J](#s3)
+4. [Finding a solution](#s4)
+5. [Building the prototype](#s5)
+6. [Using the system](#s6)
+7. [Conclusion](#s7)
+
+### <a id="s1"></a>Introduction
 This is my 3rd year graph theory project. For this project I was required to design a database for a timetabling system for a third level institute. The database stores information about student groups, classrooms, lecturers and work hours.
 
-### Understanding the problem
+### <a id="s2"></a>Understanding the problem
 The timetabling problem, in its simplest form, is trying to allocate shared resources to a given timeslot. These resources include lecturers, rooms and student groups. These resources are limited and must be scheduled in such a way that they are uniquely allocated per timeslot, meaning a lecturer can only teach one class at a time, a student group can only attend one class at a time and a room can only be used for a single class at a time. The more resources that must be scheduled the more difficult this problem gets.
 
 #### Resource constraints
@@ -14,7 +25,7 @@ This problem gets more difficult when considering the constraints on each resour
 
 All these factors make it very difficult to find a solution to the timetabling problem.
 
-### Understanding Neo4J
+### <a id="s3"></a>Understanding Neo4J
 Before trying to solve the timetabling system problem it is important to first understand Neo4J and how it works.
 
 #### What is Neo4J?
@@ -39,7 +50,7 @@ All data is a Neo4J database is represented as one of the following five:
 	
 	Properties are key-value pairs that store data in nodes and relationships. As mentioned before, Neo4J is schemaless, therefore each node or relationship can have different properties even if they have the same labels or relationship types. Properties are similar to columns in relational databases.
 
-### Finding a solution
+### <a id="s4"></a>Finding a solution
 
 #### What functionality is required?
 Before developing a solution, its important to define what functionality this system should offer. The following is a list of proposed functions for such a system.
@@ -102,8 +113,10 @@ This design utilises all of the data structures offered by Neo4J except for rela
 
 This design would also making querying student, lecturer and room timetables very easy as only adjacent Class nodes will make up their timetable as those are the only classes they are allocated to.
 
-### Obtaining the data
+### <a id="s5"></a>Building the prototype
 
-### Using the system
+#### Obtaining the data
 
-### Conclusion
+### <a id="s6"></a>Using the system
+
+### <a id="s7"></a>Conclusion
