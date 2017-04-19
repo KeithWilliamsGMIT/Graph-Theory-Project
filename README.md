@@ -1,7 +1,7 @@
 # Graph-Theory-Project
 
 This document is divided into seven sections
-1. [Understanding the problem](#s1)
+1. [Introduction](#s1)
 2. [Understanding the problem](#s2)
 3. [Understanding Neo4J](#s3)
 4. [Finding a solution](#s4)
@@ -65,20 +65,35 @@ Before developing a solution, its important to define what functionality this sy
 These functions must be considered when modeling this problem with Neo4J.
 
 #### What data needs to be stored?
-Analysing both the problem, and current GMIT timetabling system, helped determine what data this system needs to be stored
+Analysing both the problem, and the current GMIT timetabling system, helped determine what data this system needs to be stored. A brief break down is given below.
 
++ College
+    
+    The college using this timetabling system.
++ Campus
+
+    The college may have different campuses.
 + Rooms
 	
-	Rooms will be identified by room numbers. Every room has a capacity and a type, such as lecture room, computer room and so on.
+	Rooms will be identified by room numbers. Every room has a capacity and a type, such as lecture room, computer room and so on. Each room is within a campus.
++ Department
+    
+    Each campus is divided into one or more departments.
++ Course
+
+    Each department can run several courses. Courses are identified by an id and name.
++ Modules
+    
+    Each course has several modules. Modules are also identified by an id and name. More than one lecturer can teach a single module. Also, many courses can share the same module. Modules also change depending on the semester.
 + Student groups
 	
-	Student groups will be identified by a combination of their course code and group name. Each student group will have a different size that must be accounted for. However, it is not necessary to store all students as separate nodes.
+	Student groups will be identified by a group name, for example, group A, B and C. Each student group will have a different size that must be accounted for. However, it is not necessary to store all students as separate nodes.
 + Lecturers
 	
-	Lecturers will be identified by their staff ID and their working hours should be stored.
+	Lecturers will be identified by their staff ID and name, Their working hours should be stored. Each lecturer works for a department in a campus.
 + Classes
 	
-	Classes will have a module name and will be identified by a combination of the timeslot and day for which it is scheduled. Classes will also have a type which will correspond with the type of classroom is required.
+	Classes will have a will be identified by a combination of the time and day for which it is scheduled. Classes will also have a duration, type which will correspond with the type of classroom is required, a lecturer and will also belong to a module.
 	
 #### Researching other solutions
 Before trying to solve this problem I researched solutions and techniques proposed by others to solve this problem. The following is what I found.
@@ -116,6 +131,7 @@ This design would also making querying student, lecturer and room timetables ver
 ### <a id="s5"></a>Building the prototype
 
 #### Obtaining the data
+
 
 ### <a id="s6"></a>Using the system
 
