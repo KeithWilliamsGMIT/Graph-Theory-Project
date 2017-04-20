@@ -28,6 +28,7 @@ for room in rooms:
         campus = 'NUIG'
     else:
         campus = 'Unknown'
+        campus_id_length = 0
     
     # Name
     name = room[campus_id_length:].rsplit(' (')[0]

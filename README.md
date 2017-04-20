@@ -134,7 +134,7 @@ Now that the database design is complete a prototpye database can be built to de
 To populate the prototpe database data is needed. Finding and extracting this data was more difficult than anticipated due to the implementation of GMIT's current timetabling system. 
 
 ##### Rooms
-To get a list of rooms I went to the [GMIT timetable website](http://timetable.gmit.ie/). To get the list of rooms go to Academic year 16/17, Rooms and then right click and choose the View Source option. The list of rooms will be available in the following format.
+To get a list of rooms go to the [GMIT timetable website](http://timetable.gmit.ie/) and them choose Academic year 16/17, Rooms and then right click and choose the View Source option. The list of rooms will be available in the following format.
 
 ```
 <option value="0484">G0484 CR1 (20)</option>
@@ -144,6 +144,46 @@ The data for each room is within a pair of opening and closing option tags. The 
 
 To run this script go to the `data/rooms` in the terminal and type python `room-parser.py`. Example files are provided.
 
+##### Departments
+To get a list of departments, again go to the [GMIT timetable website](http://timetable.gmit.ie/), Academic year 16/17, Programmes and then right click and choose the View Source option. The list of rooms will be available in the following format.
+
+```
+<option value="9F6C92789472CF950AD128E4B39661ED">Galway Campus - Centre for the Creative Arts and Media</option>
+```
+
+The data for each room is within a pair of opening and closing option tags. Because the list of departments is a small dataset there wpuld be little benefit to writting a python script to parse it into the correct format. Instead I edited the in brackets with the help of regular expressions to produce a list in the following format.
+
+```
+"Galway","Dept of Computer Science & Applied Physics"
+```
+
+An example `departments.csv` file is provided in the `data` folder;
+
+#### Adding the data to the database
+Once the data is obtained we can start storing it in the database. The first node that needs to be created is the college node.
+
+```
+CREATE (c:College {name: "GMIT"});
+```
+
+Next create the room and campus nodes from the `rooms.csv` file created earlier, as shown below.
+
+```
+LOAD CSV WITH HEADERS FROM "file:///rooms.csv" AS line
+MERGE (r:Room { name: line.name, capacity: line.capacity })
+MERGE (c:Campus { name: line.campus })
+MERGE (c)-[:HAS]->(r);
+```
+
+Then to create relationships between the college and campus nodes.
+
+```
+MATCH (col:College {name: "GMIT"}), (c:Campus) CREATE (col)-[:Has]->(c);
+```
+
 ### <a id="s6"></a>Using the system
 
 ### <a id="s7"></a>Conclusion
+
+References:
++ [Importing CSV files with Cypher](https://neo4j.com/docs/developer-manual/current/get-started/cypher/importing-csv-files-with-cypher/)
