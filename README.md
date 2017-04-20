@@ -76,7 +76,7 @@ Analysing both the problem, and the current GMIT timetabling system, helped dete
 + Rooms
 	
 	Rooms will be identified by room numbers. Every room has a capacity and a type, such as lecture room, computer room and so on. Each room is within a campus.
-+ Department
++ Department 
     
     Each campus is divided into one or more departments.
 + Course
@@ -85,9 +85,12 @@ Analysing both the problem, and the current GMIT timetabling system, helped dete
 + Modules
     
     Each course has several modules. Modules are also identified by an id and name. More than one lecturer can teach a single module. Also, many courses can share the same module. Modules also change depending on the semester.
++ Year groups
+	
+	Year groups will be identified by a unique code. Year groups are broken into Student groups.
 + Student groups
 	
-	Student groups will be identified by a group name, for example, group A, B and C. Each student group will have a different size that must be accounted for. However, it is not necessary to store all students as separate nodes.
+	Student groups will be identified by a combination of the year group and a group name, for example, group A, B and C. Each student group will have a different size that must be accounted for. However, it is not necessary to store all students as separate nodes.
 + Lecturers
 	
 	Lecturers will be identified by their staff ID and name, Their working hours should be stored. Each lecturer works for a department in a campus.
@@ -116,22 +119,17 @@ In this graph the vertices could represent classes. The edges could represent co
 Sources: *[Wikipedia](https://en.wikipedia.org/wiki/Graph_coloring)*
 
 #### Using graph theory to model this problem
-Given the list of data given above that needs to be stored, it seems intuitive to make the bullet points nodes and labels in the graph and the data in the paragraphs properties of those nodes. Therefore there will be four labels which are Room, Group, Lecturer and Class.
+Given the list of data given above that needs to be stored, it seems intuitive to make each bullet point a label in the graph and the data in the paragraphs properties of those nodes. Therefore there will be ten labels which are COLLEGE, CAMPUS, ROOM, DEPARTMENT, COURSE, MODULE, YEAR_GROUP, STUDENT_GROUP, LECTURER and CLASS.
 
-Then the problem emerges how to connect or relate these nodes to each other. This is less straight forward. At first glance it seems that all nodes should be connected to a Class node. An example of these relationships might be as follows.
+Then the problem emerges how to connect or relate these nodes to each other. This is less straight forward. When designing the graph I started with the college node and worked down to the class nodes as shown in the following diagram.
 
-+ Room HOSTS Class
-+ Group ATTENDS Class
-+ Lecturer TEACHES Class
+![Graph design](https://g.gravizo.com/svg?digraph%20G%20%7B%0ACOLLEGE%20%5Blabel%3D%22COLLEGE%5Cnname%3A%20%27GMIT%27%22%5D%3B%0ACAMPUS%20%5Blabel%3D%22CAMPUS%5Cnname%3A%20%27Galway%27%22%5D%3B%0ADEPARTMENT%20%5Blabel%3D%22DEPARTMENT%5Cnname%3A%20%27Computer%20Science%5Cnand%20Applied%20Physics%27%22%5D%3B%0AROOM%20%5Blabel%3D%22ROOM%5Cnnumber%3A%20944%2C%5Cncapacity%3A%2090%2C%5Cntype%3A%20lecture%22%5D%3B%0ACOURSE%20%5Blabel%3D%22COURSE%5Cntitle%3A%20%27Computing%20in%5CnSoftware%20Development%27%2C%5Cncourse_code%3A%20%27KSOFG%27%5Cnlevel%3A%207%22%5D%3B%0AYEAR_GROUP%20%5Blabel%3D%22YEAR_GROUP%5Cnyear_code%3A%20%27B070306%27%2C%5Cnstart_year%3A%202014%22%5D%0ALECTURER%20%5Blabel%3D%22LECTURER%5Cnid%3A%20%27G00123456%2C%27%5Cnname%3A%20%27John%20Smith%27%2C%5Cnwork_hours%3A%2038%22%5D%3B%0ASTUDENT_GROUP%20%5Blabel%3D%22STUDENT_GROUP%5Cnname%3A%20%27C%27%5Cnnumber_of_students%3A%2025%22%5D%3B%0AMODULE%20%5Blabel%3D%22MODULE%5Cnname%3A%20%27Software%20Testing%27%22%5D%3B%0ACLASS%20%5Blabel%3D%22CLASS%5Cntime%3A%2010%2C%5Cnduration%3A%202%2C%5Cntype%3A%20%27Practical%27%22%5D%3B%20%0ACOLLEGE%20-%3E%20CAMPUS%20%5Blabel%3D%22HAS%22%5D%3B%0ACAMPUS%20-%3E%20DEPARTMENT%20%20%5Blabel%3D%22HAS%22%5D%3B%0ACAMPUS%20-%3E%20ROOM%20%20%5Blabel%3D%22HAS%22%5D%3B%0ADEPARTMENT%20-%3E%20COURSE%20%20%5Blabel%3D%22RUNS%22%5D%3B%0ADEPARTMENT%20-%3E%20LECTURER%20%5Blabel%3D%22EMPLOYS%22%5D%3B%0ACOURSE%20-%3E%20YEAR_GROUP%20%5Blabel%3D%22ENROLLS%22%5D%3B%0AYEAR_GROUP%20-%3E%20STUDENT_GROUP%20%5Blabel%3D%22HAS%22%5D%3B%0AYEAR_GROUP%20-%3E%20MODULE%20%5Blabel%3D%22STUDIES%5Cnsemester%3A%206%22%5D%3B%0AMODULE%20-%3E%20CLASS%20%5Blabel%3D%22SUBJECT%20OF%22%5D%3B%0ALECTURER%20-%3E%20CLASS%20%5Blabel%3D%22TEACHES%22%5D%3B%0AROOM%20-%3E%20CLASS%20%5Blabel%3D%22HOSTS%22%5D%3B%0ASTUDENT_GROUP%20-%3E%20CLASS%20%5Blabel%3D%22ATTENDS%22%5D%3B%0A%7D)
 
-This design utilises all of the data structures offered by Neo4J except for relationship properties. In this solution the direction would be used to indicate a resource that is ALLOCATED TO a class. The simplicity of this approach would offer a lot of flexibility, for example, it doesn't restrict more than one lecturer from teaching the same module.
-
-This design would also making querying student, lecturer and room timetables very easy as only adjacent Class nodes will make up their timetable as those are the only classes they are allocated to.
+This design would utilise all of the data structures offered by Neo4J. This solution is designed to be flexible and to reduce duplication. This design would also making querying student, lecturer and room timetables very easy as only adjacent class nodes will be returned.
 
 ### <a id="s5"></a>Building the prototype
 
 #### Obtaining the data
-
 
 ### <a id="s6"></a>Using the system
 
