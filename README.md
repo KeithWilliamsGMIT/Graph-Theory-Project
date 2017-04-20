@@ -128,8 +128,21 @@ Then the problem emerges how to connect or relate these nodes to each other. Thi
 This design would utilise all of the data structures offered by Neo4J. This solution is designed to be flexible and to reduce duplication. This design would also making querying student, lecturer and room timetables very easy as only adjacent class nodes will be returned.
 
 ### <a id="s5"></a>Building the prototype
+Now that the database design is complete a prototpye database can be built to demonstrate how it might be used.
 
 #### Obtaining the data
+To populate the prototpe database data is needed. Finding and extracting this data was more difficult than anticipated due to the implementation of GMIT's current timetabling system. 
+
+##### Rooms
+To get a list of rooms I went to the [GMIT timetable website](http://timetable.gmit.ie/). To get the list of rooms go to Academic year 16/17, Rooms and then right click and choose the View Source option. The list of rooms will be available in the following format.
+
+```
+<option value="0484">G0484 CR1 (20)</option>
+```
+
+The data for each room is within a pair of opening and closing option tags. The first series of characters are a campus identifier and room number combination. The second set of data is the room name. At the end, within the round brackets, is the rooms capacity. After copying the list of rooms to a file I opened it with the Brackets editor which has a replace function that takes a regular expression. Using this feature I was able to remove the HTML option tags with the regular expression `<[^>]*>`. Once the file was in this format I used a Python script to parse it and write the data to a CSV file. This script takes a file called `rooms.txt` as an input and outputs a file called `rooms.csv` which can be loaded into Neo4J.
+
+To run this script go to the `data/rooms` in the terminal and type python `room-parser.py`. Example files are provided.
 
 ### <a id="s6"></a>Using the system
 
