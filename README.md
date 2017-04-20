@@ -181,6 +181,15 @@ Then to create relationships between the college and campus nodes.
 MATCH (col:College {name: "GMIT"}), (c:Campus) CREATE (col)-[:Has]->(c);
 ```
 
+Next, create department nodes and the relationships between the new departments and the campus nodes to which they belong.
+
+```
+LOAD CSV WITH HEADERS FROM "file:///departments.csv" AS line
+MERGE (d:Department { name: line.name })
+MERGE (c:Campus { name: line.campus })
+MERGE (c)-[:HAS]->(d);
+```
+
 ### <a id="s6"></a>Using the system
 
 ### <a id="s7"></a>Conclusion
