@@ -1,0 +1,24 @@
+G-BACAG95 Assc of Chartered Certified Accountants Professional L9 Yr 5 Sem 09
+G-BACAG95 Assc of Chartered Certified Accountants Professional L9 Yr 5 Sem 10
+G-BACCG81 BB in Accountancy L8 Yr 1 Sem 1
+G-BACCG81 BB in Accountancy L8 Yr 1 Sem 2
+G-BACCG82 BB in Accountancy L8 Yr 2 Sem 3
+G-BACCG82 BB in Accountancy L8 Yr 2 Sem 4
+G-BACCG83 BB in Accountancy L8 Yr 3 Sem 5
+G-BACCG83 BB in Accountancy L8 Yr 3 Sem 6
+G-BACCG95 Post Graduate Diploma in Accounting L9 Yr 5 Sem 09
+G-BACCG95 Post Graduate Diploma in Accounting L9 Yr 5 Sem 10
+G-BADIG73 BB in Admin & Info Systems L7 Yr 3 Sem 5
+G-BADIG73 BB in Admin & Info Systems L7 Yr 3 Sem 6
+G-BBISG71 BSc in Business Information Systems L7 Yr 1 Sem 1
+G-BBISG71 BSc in Business Information Systems L7 Yr 1 Sem 2
+G-BBISG72 BSc in Business Information Systems L7 Yr 2 Sem 3
+G-BBISG72 BSc in Business Information Systems L7 Yr 2 Sem 4
+G-BBISG81 BSc (Hons) in Business Information Systems L8 Yr 1 Sem 1
+G-BBISG81 BSc (Hons) in Business Information Systems L8 Yr 1 Sem 2
+G-BBISG82 BSc (Hons) in Business Information Systems L8 Yr 2 Sem 3
+G-BBISG82 BSc (Hons) in Business Information Systems L8 Yr 2 Sem 4
+G-BINAG83 BA in Info Systems Mgmt L8 Yr 3 Sem 5
+G-BINAG83 BA in Info Systems Mgmt L8 Yr 3 Sem 6
+G-BINSG84 BA in Information Systems Mgmt L8 Yr 4 Sem 7
+G-BINSG84 BA in Information Systems Mgmt L8 Yr 4 Sem 8

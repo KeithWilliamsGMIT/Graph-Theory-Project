@@ -128,10 +128,10 @@ Then the problem emerges how to connect or relate these nodes to each other. Thi
 This design would utilise all of the data structures offered by Neo4J. This solution is designed to be flexible and to reduce duplication. This design would also making querying student, lecturer and room timetables very easy as only adjacent class nodes will be returned.
 
 ### <a id="s5"></a>Building the prototype
-Now that the database design is complete a prototpye database can be built to demonstrate how it might be used.
+Now that the database design is complete a prototype database can be built to demonstrate how it might be used.
 
 #### Obtaining the data
-To populate the prototpe database data is needed. Finding and extracting this data was more difficult than anticipated due to the implementation of GMIT's current timetabling system. 
+To populate the prototype database, data is needed. Finding and extracting this data was more difficult than anticipated due to the implementation of GMIT's current timetabling system from which most of the data was extracted from. In order to prperly test this databse design I tried to accumulate as much data as possible.
 
 ##### Rooms
 To get a list of rooms go to the [GMIT timetable website](http://timetable.gmit.ie/) and them choose Academic year 16/17, Rooms and then right click and choose the View Source option. The list of rooms will be available in the following format.
@@ -151,13 +151,22 @@ To get a list of departments, again go to the [GMIT timetable website](http://ti
 <option value="9F6C92789472CF950AD128E4B39661ED">Galway Campus - Centre for the Creative Arts and Media</option>
 ```
 
-The data for each room is within a pair of opening and closing option tags. Because the list of departments is a small dataset there wpuld be little benefit to writting a python script to parse it into the correct format. Instead I edited the in brackets with the help of regular expressions to produce a list in the following format.
+The data for each room is within a pair of opening and closing option tags. Because the list of departments is a small dataset there would be little benefit to writting a python script to parse it into the correct format. Instead I edited the in brackets with the help of regular expressions to produce a list in the following format.
 
 ```
 "Galway","Dept of Computer Science & Applied Physics"
 ```
 
-An example `departments.csv` file is provided in the `data` folder;
+An example `departments.csv` file is provided in the `data` folder.
+
+##### Courses
+A list of courses is also available on the same page as the departments. This list will be available in the following format.
+
+```
+<option value="GA_KSOFT_7GM36SOF7">G-KSOFG73 BSc in Computing in Software Development L7 Yr 3 Sem 6</option>
+```
+
+Converting this list to a CSV file isn't as straight forward as there is no link between the department and course. I selected each department on the [GMIT timetable website](http://timetable.gmit.ie/) and viewed each page source individually. I then copied them to seperated files called `dept-n.txt` and used the Brackets editor to remove the option tags and `&amp;` codes from the files. Then, using a python script I was able to combine these files into a single `courses.csv` file, getting the department name from the `departments.csv` file created earlier. This file can then be loaded into Neo4J. To run this script go to the `data/courses` using a terminal and type python `course-parser.py`.
 
 #### Adding the data to the database
 Once the data is obtained we can start storing it in the database. The first node that needs to be created is the college node.

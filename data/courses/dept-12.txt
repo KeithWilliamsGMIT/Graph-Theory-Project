@@ -1,0 +1,28 @@
+L-AEDUL84 Prof Dipl in Ed (Construction Studies/Design/Comm Graphics) L8 Yr 4
+L-SDETL81 BSc in Design & Technical Education (Honours) L8 Yr 1
+L-SDETL82 BSc in Design & Technical Education (Honours) L8 Yr 2
+L-SDETL83 BSc in Design & Technical Education L8 Yr 3
+L-SDETL84 BSc in Design & Technical Education L8 Yr 4
+L-SFDAL81-1 BSc in Furniture Design and Manufacture (Honours) L8 Yr 1 Gr 1
+L-SFDAL81-2 BSc in Furniture Design and Manufacture (Honours) L8 Yr 1 Gr2
+L-SFDAL82-1 BSc in Furniture Design and Manufacture (Honours) L8 Yr 2 Gr 1
+L-SFDAL82-2 BSc in Furniture Design and Manufacture (Honours) L8 Yr 2 Gr 2
+L-SFDAL83-1 L8 Yr 3
+L-SFDAL83-1 L8 Yr 3
+L-SFUDL71-1 BSc in Furniture Design and Manufacture L7 Yr 1 Gr1
+L-SFUDL71-2 BSc in Furniture Design and Manufacture L7 Yr 1 Gr2
+L-SFUDL72-1 BSc in Furniture Design and Manufacture L7 Yr 2 Gr 1
+L-SFUDL72-2 BSc in Furniture Design and Manufacture L7 Yr 2 Gr 2
+L-SFUDL73 BSc in Furniture Design and Manufacture L7  Yr 3 Gr 1
+L-SFUDL73 BSc in Furniture Design and Manufacture L7 Yr 3 Gr 2
+L-SFUDL81-1 BSc (Honours) in Furniture Design and Manufacture L8 Yr 1 Gr1
+L-SFUDL81-2 BSc (Honours) in Furniture Design and Manufacture L8 Yr 1 Grr2
+L-SFUDL82-1 BSc in Furniture Design and Manufacture L8 Yr 2 Gr 1
+L-SFUDL82-1 BSc in Furniture Design and Manufacture L8 Yr 2 Gr 1
+L-SFUDL83 BSc in Furniture Design and Manufacture L8  Yr 3 Gr 1
+L-SFUDL83 BSc in Furniture Design and Manufacture L8  Yr 3 Gr 1
+L-SFUDL84 BSc in Furniture Design and Manufacture (Honours) L8 Yr 4
+L-SFUWL71 BSc in Furniture & Wood Technology L7 Yr 1
+L-SFUWL72 BSc in Furniture & Wood Technology L7 Yr 2
+L-SFUWL83 BSc in Furniture & Wood Technology (Honours) L8 Yr 3
+L-SFUWL84 BSc in Furniture & Wood Technology (Honours) L8 Yr 4

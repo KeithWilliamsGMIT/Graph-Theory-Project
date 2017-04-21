@@ -1,0 +1,23 @@
+G-EARAG1 Architectural Technology  Yr 1 Sem 1
+G-EARAG1 Architectural Technology  Yr 1 Sem 2
+G-EARAG2 Architectural Technology  Yr 2
+G-EARAG3 Architectural Technology  Yr 3
+G-EARAG84 BSc (Hons) in Architectural Technology L8 Yr 4
+G-EBIMG81 Higher Diploma in Engineering in Building Information Modelling L8 Yr 1
+G-ECEAG2 BSc in Quantity Surveying and Construction Economics Yr 2 Sem 3
+G-ECEAG2 BSc in Quantity Surveying and Construction Economics Yr 2 Sem 4
+G-ECEAG3 Construction Economics & Quantity Surveying Yr 3 Sem  6
+G-ECEAG3 Construction Economics & Quantity Surveying Yr 3 Sem 5
+G-ECEAG84 BSc (Hons) in Construction Economics & Quantity Surveying L8 Yr 4
+G-ECEQG1 BSc in Quantity Surveying and Construction Economics Yr 1
+G-ECIAG1 Civil Engineering Yr 1 Sem 1
+G-ECIAG1 Civil Engineering Yr 1 Sem 2
+G-ECIAG2 Civil Engineering Yr 2
+G-ECIAG3 Civil Engineering Yr 3 Sem 5
+G-ECIAG3 Civil Engineering Yr 3 Sem 6
+G-ECIVG84 BEng in Civil Engineering L8 Yr 4
+G-ECOMG1 Construction Mgmt Yr 1
+G-ECOMG2 Construction Mgmt Yr 2
+G-ECOMG3 Construction Mgmt Yr 3 Sem 5
+G-ECOMG4 Construction Mgmt Yr 4
+G-EQSCG71 BSc in Construction Economics and QS L7 Yr 1

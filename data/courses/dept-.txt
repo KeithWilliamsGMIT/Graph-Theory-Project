@@ -1,0 +1,42 @@
+MA- Cons SPA-CCONC_S06_Construction Management Yr1
+MA-ASC1_SCARC_B07  BA in Applied Social Studies L7 Yr 1
+MA-ASC2_SCARC_B07 BA in Applied Social Studies L7 Yr 2
+MA-ASC3_SASSC_B07 BA in Applied Social Studies L7 Yr 3
+MA-ASC4-SCARC_H08 Applied Social Studies L8 Yr 4
+MA-BAFM1-BAFMCC71 BA in Accounting and Finance L7 Yr 1
+MA-BAFM2-BACFA72 BA in Accounting & Financial Mgmt L7 Yr 2
+MA-BAFM3-BAFMC73 BA in Accounting & Financial Mgmt (Add on) L7 Yr 3
+MA-BAFM4-BACTC84 Bachelor of Business (Honours) in Accounting L8 Yr 4
+MA-BUS1-BBUSC71 BB in Business L7 Yr 1
+MA-BUS2-BBUSC72 BB in Business L7 Yr 2
+MA-BUS3_BBUSS_B07 BB in Business L7 Yr 3
+MA-BUS4-BBUSC84 Bachelor of Business L8 Yr 4
+MA-CA2 BICT62 HC in Computer Applications L6 Yr 2
+MA-CON3-CMRMC73 BSc in Construction Management in Refurbishment and Maintenance Yr 3
+MA-DigMe2-KDMSC_H08 BSc in Digital Media & Society L8 Yr 2
+MA-DigMe3-KDMSC_H08 BSc in Digital Media & Society L8 Yr 3
+MA-DigMe4-KDMSC_H08 BSc in Digital Media & Society L8 Yr 4
+MA-Found-TFOUC_F05 Foundation Studies
+MA-Her2-HHERC71 BA in Humanities in Heritage Studies L7 Yr 2
+MA-Her3_HHERC_B07 BA in Humanities in Heritage Studies L7 Yr 3
+MA-Her4-HHERI84 BA in Heritage Studies L8 Yr 4
+MA-HRM2-BHRMC72 BA in Human Resource Mgmt L7 Yr 2
+MA-ITS1-KITSC61 HC Science in Info Tech Support L6 Yr 1
+MA-ITS2-KITSC62 HC Science in Info Tech Support L6 Yr 2
+MA-ITS3-KITAC73 BSc Computing in Info Tech Administration L7 Yr 3
+MA-ITS4-KCSMC84 BSc in Computer Service Mgmt L8 Yr 4
+MA-NGen2-SGENC82 BSc (Hons) in General Nursing Yr 2
+MA-NGen3-SGENC83 BSc in General Nursing L8 Yr 3
+MA-NGen4-SGENC84 BSc in General Nursing L8 Yr 4
+MA-NInt4-NNURSK84 Nursing International Program
+MA-NPsy1-SPSYC81 BSc in Psychiatric Nursing L8 Yr 1
+MA-NPsy2-SPSYC82 BSc (Hons) in Psychiatric Nursing Yr 2
+MA-NPsy3-SPSYC83 BSc in Psychiatric Nursing Yr 3
+MA-NPsy4-SPSYC83 BSc in Psychiatric Nursing Yr 4
+MA-N-SECHC Early Childhood Education and Care
+MA-OE1-HOELC71 BA in Outdoor Education & Leisure L7 Yr 1
+MA-OE2-HOELC72 BA in Outdoor Education & Leisure L7 Yr 2
+MA-OE3-HOELC73 BA in Outdoor Education and Leisure L7 Yr 3
+MA-SUPMAN1-BSVMC71 Supervisory Management  Yr 1
+M-HOEDC84 BA in Outdoor Education & Leisure L8 Yr 4
+M-NGen1-SGENC81 BSc in General Nursing L8 Yr 1

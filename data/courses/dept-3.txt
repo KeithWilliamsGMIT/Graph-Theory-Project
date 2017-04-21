@@ -1,0 +1,30 @@
+G-KBDIG72 BSc in Business Computing & Digital Media L7 Yr 2 Sem 3
+G-KBDIG72 BSc in Business Computing & Digital Media L7 Yr 2 Sem 4
+G-KBDIG73 BSc in Business Computing & Digital Media L7 Yr 3 Sem 5
+G-KBDIG73 BSc in Business Computing & Digital Media L7 Yr 3 Sem 6
+G-KCDMG71 BSc in Business Computing & Digital Media L7 Yr 1 Sem 1
+G-KCDMG71 BSc in Business Computing & Digital Media L7 Yr 1 Sem 2
+G-KCDMG81 BSc in Business Computing & Digital Media L8 Yr 1 Sem 1
+G-KCDMG81 BSc in Business Computing & Digital Media L8 Yr 1 Sem 2
+G-KCDMG84 BSc in Computing and Digital Media L8 Yr 4 Sem 7
+G-KCDMG84 BSc in Computing and Digital Media L8 Yr 4 Sem 8
+G-KITAG84 BSc in Information Technology for Business L8 Yr 4 Sem 7
+G-KITAG84 BSc in Information Technology for Business L8 Yr 4 Sem 8
+G-KSOAG81 BSc (HONOURS) in Computing in Software Development L8 Yr 1 Sem
+G-KSOAG81 BSc (HONOURS) in Computing in Software Development L8 Yr 1 Sem 2
+G-KSOAG82 BSc (HONOURS) in Computing in Software Development L8 Yr 2 Sem 3
+G-KSOAG82 BSc (HONOURS) in Computing in Software Development L8 Yr 2 Sem 4
+G-KSOFG1 BSc in Computing in Software Development Yr 1 Sem 2
+G-KSOFG71 BSc in Computing in Software Development L7 Yr 1 Sem 1
+G-KSOFG72 BSc in Software Development L7 Yr 2 Sem 3
+G-KSOFG72 BSc in Software Development L7 Yr 2 Sem 4
+G-KSOFG73 BSc in Computing in Software Development L7 Yr 3 Sem 5
+G-KSOFG73 BSc in Computing in Software Development L7 Yr 3 Sem 6
+G-KSOFGH84 BSc in Software Development L8 Yr 4 Sem 7
+G-KSOFGH84 BSc in Software Development L8 Yr 4 Sem 8
+G-KSOFGL84 HDip in Science Software Development L8 Yr 4  Jan-May2017
+G-KSOFGL84 HDip in Science Software Development L8 Yr 4 Sept-Dec2017
+G-KSOFN62 BSc in Computing in Software Development L6 Yr 2 Sem 3
+G-KSOFN62 BSc in Computing in Software Development L6 Yr 2 Sem 4
+G-KWEBG71 BSc in Web Technologies and Programming L7 Yr 1 Jan-May Sem 1
+G-KWEBG71 BSc in Web Technologies and Programming L7 Yr 1 Sept-Dec Sem 2

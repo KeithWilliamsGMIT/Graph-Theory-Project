@@ -1,0 +1,60 @@
+G-BBENG71 BB IN Entrepreneurship L7 Yr 1 Sem 1
+G-BBENG71 BB in Entrepreneurship L7 Yr 1 Sem 2
+G-BBENG72 Bachelor of Business in  Entrepreneurship L7 Yr 2 Sem 3
+G-BBENG72 Bachelor of Business in Entrepreneurship L7 Yr 2 Sem 4
+G-BBENG81 Bachelor of Business (Honours) in Entrepreneurship L8 Yr 1 Sem 1
+G-BBENG81 Bachelor of Business (Honours) in Entrepreneurship L8 Yr 1 Sem 2
+G-BBENG82 Bachelor of Business (Honours) in Entrepreneurship L8 Yr 2 Sem 3
+G-BBENG82 Bachelor of Business (Honours) in Entrepreneurship L8 Yr 2 Sem 4
+G-BBUAG81 BB in Business L8 Yr 1 Sem 1
+G-BBUAG81 BB in Business L8 Yr 1 Sem 2
+G-BBUAG82 BB in Business L8 Yr 2 Sem 3
+G-BBUAG82 BB in Business L8 Yr 2 Sem 4
+G-BBUAG83 BB in Business in Human Resources Management L8 Yr 3 Sem 5
+G-BBUAG83 BB in Business in Human Resources Management L8 Yr 3 Sem 6
+G-BBUAG83 BB in Business in Information Technology L8 Yr 3 Sem 5
+G-BBUAG83 BB in Business in Information Technology L8 Yr 3 Sem 6
+G-BBUAG83 BB in Business in Marketing L8 Yr 3 Sem 5
+G-BBUAG83 BB in Business in Marketing L8 Yr 3 Sem 6
+G-BBUSG71 Bachelor of Business L7 Yr 1 Sem 2
+G-BBUSG71 BB in Business L7 Yr 1 Sem 1
+G-BBUSG72 Bachelor of Business L7 & BBUAG82 BB in Business L8 Yr 2 Sem 4
+G-BBUSG72 Bachelor of Business L7 Yr 2 Sem 3
+G-BBUSG73 Bachelor of Business in Human Resources Management L7 Yr 3 Sem 5
+G-BBUSG73 Bachelor of Business in Human Resources Management L7 Yr 3 Sem 6
+G-BBUSG73 Bachelor of Business in Information Technology L7 Yr 3 Sem 5
+G-BBUSG73 Bachelor of Business in Information Technology L7 Yr 3 Sem 6
+G-BBUSG73 Bachelor of Business in Marketing L7 Yr 3 Sem 5
+G-BBUSG73 Bachelor of Business in Marketing L7 Yr 3 Sem 6
+G-BBUSG84 Bachelor of Business in Economics & Finance L8 Yr 4 Sem 7
+G-BBUSG84 Bachelor of Business in HRM L8 Yr 4 Sem 7
+G-BBUSG84 Bachelor of Business in Management L8 Yr 4 Sem 7
+G-BBUSG84 Bachelor of Business in Marketing  L8 Yr 4 Sem 7
+G-BBUSG84 Bachelor of Business in Rural Enterprise L8 Yr 4 Sem 7
+G-BBUSS84 Bachelor of Business in Economics & Finance L8 Yr 4 Sem 8
+G-BBUSS84 Bachelor of Business in HRM L8 Yr 4 Sem 8
+G-BBUSS84 Bachelor of Business in Marketing L8 Yr 4 Sem 8
+G-BBUSS84 Bachelor of Business in Mgmt L8 Yr 4 Sem 8
+G-BBUSS84 Bachelor of Business in Rural Enterprise L8 Yr 4 Sem 8
+G-BFING71 Bachelor of Business in Finance and Economics Yr 1 Sem 1
+G-BFING71 Bachelor of Business in Finance and Economics Yr 1 Sem 1
+G-BFING72 Bachelor of Business in Finance and Economics Yr 2 Sem 3
+G-BFING72 Bachelor of Business in Finance and Economics Yr 2 Sem 4
+G-BFING81 Bachelor of Business (Honours) in Finance and Economics L8 Yr 1 Sem 1
+G-BFING81 Bachelor of Business (Honours) in Finance and Economics L8 Yr 1 Sem 1
+G-BFING82 Bachelor of Business (Honours) in Finance and Economics L8 Yr 2 Sem 3
+G-BFING82 Bachelor of Business (Honours) in Finance and Economics L8 Yr 2 Sem 4
+G-BMASG71 Bachelor of Business in Marketing L7 Yr 1 Sem 1
+G-BMASG71 Bachelor of Business in Marketing L7 Yr 1 Sem 1
+G-BMASG72 Bachelor of Business in Marketing L7 Yr 2 Sem 3
+G-BMASG72 Bachelor of Business in Marketing L7 Yr 2 Sem 4
+G-BMASG81 Bachelor of Business (Honours) in Marketing L8 Yr 1 Sem 1
+G-BMASG81 Bachelor of Business (Honours) in Marketing L8 Yr 1 Sem 1
+G-BMASG82 Bachelor of Business (Honours) in Marketing L8 Yr 2 Sem 3
+G-BMASG82 Bachelor of Business (Honours) in Marketing L8 Yr 2 Sem 4
+G-BRUAG71 BB in Rural Enterprise & Agri-Business L7 Yr 1 Sem 1
+G-BRUAG71 BB in Rural Enterprise & Agri-Business L7 Yr 1 Sem 2
+G-BRUAG72 BB in Rural Enterprise & Agri-Business L7 Yr 2 Sem 3
+G-BRUAG72 BB in Rural Enterprise & Agri-Business L7 Yr 2 Sem 4
+G-BRUAG73 BB in Rural Enterprise & Agri-Business L7 Yr 3 Sem 5
+G-BRUAG73 BB in Rural Enterprise & Agri-Business L7 Yr 3 Sem 6

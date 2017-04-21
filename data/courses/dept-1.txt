@@ -1,0 +1,51 @@
+G-AARPG74 BA in Art & Design Flexible Mode Yr 4
+G-AARPG75 BA in Art & Design Flexible Mode Yr 5
+G-AARPG76 BA in Art & Design Flexible Mode Yr 6
+G-AARTG73 BA in Art & Design Ceramics L7 Yr 3
+G-AARTG73 BA in Art & Design Painting L7 Yr 3
+G-AARTG73 BA in Art & Design Printmaking L7 Yr 3
+G-AARTG73 BA in Art & Design Sculpture L7 Yr 3
+G-AARTG73 BA in Art & Design Textiles L7 Yr 3
+G-ACONG71 Gr A BA in Contemporary Art L7 Yr 1 Sem 1
+G-ACONG71 Gr B BA in Contemporary Art L7 Yr 1 Sem 1
+G-ACONG71 Gr C BA in Contemporary Art L7 Yr 1 Sem 1
+G-ACONG71 Gr C BA in Contemporary Art L7 Yr 1 Sem 2
+G-ACONG72 BA in Contemporary Art  Gr B L7 Yr 2 Sem 3
+G-ACONG72 BA in Contemporary Art Gr A L7 Yr 2 Sem 3
+G-ACONG72 BA in Contemporary Art L7 Yr 2 Sem 4
+G-ACONG72 BA in Contemporary Art L7 Yr 2 Sem 4
+G-ACONG72 BA in Contemporary Art L7 Yr 2 Sem 4
+G-ACONG82 BA (Honours) in Contemporary Art L8 Yr 2 Sem 4
+G-ACONGG71 Gr A BA in Contemporary Art L7 Yr 1 Sem 2
+G-ACONGG71 Gr B BA in Contemporary Art L7 Yr 1 Sem 2
+G-ACREG95 MA-CP-1
+G-ACREG95 MA-CP-2
+G-ACREG95 MA-CP-3
+G-ACREG95 MA-CP-4
+G-AFING84 BA in Fine Art Ceramics L8 Yr 4
+G-AFING84 BA in Fine Art Painting L8 Yr 4
+G-AFING84 BA in Fine Art Printmaking L8 Yr 4
+G-AFING84 BA in Fine Art Sculpture L8 Yr 4
+G-DDESG71 Gr D BA in Contemporary Art L7 Yr 1 Sem 1
+G-DDESG71 Gr D BA in Contemporary Art L7 Yr 1 Sem 2
+G-DDESG71 Gr E BA in Contemporary Art L7 Yr 1 Sem 1
+G-DDESG71 Gr E BA in Contemporary Art L7 Yr 1 Sem 2
+G-DDESG71 Gr F BA in Contemporary Art L7 Yr 1 Sem 1
+G-DDESG71 Gr F BA in Contemporary Art L7 Yr 1 Sem 2
+G-DDESG72 BA in Contemporary Art L7 Yr 2 Sem 4
+G-DDESG72 Gr C BA in Contemporary Art L7 Yr 2 Sem 3
+G-DDESG72 Gr D BA in Contemporary Art L7 Yr 2 Sem 3
+G-DTEXT84 BA in Honours in Design in Textiles L8 Yr 4
+G-HFILG81 BA (Honours) in Film & Documentary L8 Yr 1 Sem 1
+G-HFILG81A BA (Honours) in Film & Documentary L8 Yr 1 Sem 2
+G-HFILG81B BA (Honours) in Film & Documentary L8 Yr 1 Sem 2
+G-HFILG81C BA (Honours) in Film & Documentary L8 Yr 1 Sem 2
+G-HFILG82 BA (Honours) in Film & Documentary L8 Yr 2 Sem 3
+G-HFILG82 Gr A BA (Honours) in Film & Documentary L8 Yr 2 Sem 4
+G-HFILG82 Gr B BA (Honours) in Film & Documentary L8 Yr 2 Sem 4
+G-HFILG82 Gr C BA (Honours) in Film & Documentary L8 Yr 2 Sem 4
+G-HFILG83 BA (Honours) in Film & Documentary L8 Yr 3 Sem 5
+G-HFITG83 Gr A BA in Film & TV L8 Yr 3 Sem 6
+G-HFITG83 Gr B BA in Film & TV L8 Yr 3 Sem 6
+G-HFITG83 Gr C BA in Film & TV L8 Yr 3 Sem 6
+G-HFITG83 Gr D BA in Film & TV L8 Yr 3 Sem 6

@@ -1,0 +1,29 @@
+G-OBRMG73 BBs (Ordinary) Bar & Restaurant Management L7 Yr 3 Sem 6
+G-OEVEG71 BB in Event Mgmt (with Public Relations) L7 Yr 1 Sem 2
+G-OEVEG72 BB in Event Mgmt (with Public Relations) L7 Yr 2 Sem 3
+G-OEVEG72 BB in Event Mgmt (with Public Relations) L7 Yr 2 Sem 4
+G-OEVEG73 BB in Event Mgmt (with Public Relations) L7 Yr 3 Sem 5
+G-OEVEG73 BB in Event Mgmt (with Public Relations) L7 Yr 3 Sem 6
+G-OEVEN71 BB in Event Mgmt (with Public Relations) L7 Yr 1 Sem 1
+G-OHCAG71 BB in Hotel and Catering Mgmt L7 Yr 1 Sem 1
+G-OHCAG71 BB in Hotel and Catering Mgmt L7 Yr 1 Sem 2
+G-OHCAG72 BB in Hotel and Catering Mgmt L7 Yr 2 Sem 3
+G-OHCAG72 BB in Hotel and Catering Mgmt L7 Yr 2 Sem 4
+G-OHCAG73 BB in Hotel and Catering Mgmt L7 Yr 3 Sem 5
+G-OHCAG73 BB in Hotel and Catering Mgmt L7 Yr 3 Sem 6
+G-OHCAG81 BA in Hotel and Catering Management L8 Yr 1 Sem 1
+G-OHCAG81 BA in Hotel and Catering Management L8 Yr 1 Sem 2
+G-OHCAG82 BA in Hotel and Catering Mgmt L8 Yr 2 Sem 3
+G-OHCAG82 BA in Hotel and Catering Mgmt L8 Yr 2 Sem 4
+G-OHCAG83 BA in Hotel and Catering Mgmt L8 Yr 3 Sem 6
+G-OHCAG84 BA in Hotel and Catering Mgmt L8 Yr 4 Sem 7
+G-OHCAG84 BA in Hotel and Catering Mgmt L8 Yr 4 Sem 8
+G-OHOPG62 HC in Arts in Hotel and Hospitality Studies L6 Yr 2 Sem 3
+G-OHOPG62 HC in Arts in Hotel and Hospitality Studies L6 Yr 2 Sem 4
+G-OHOSG61 HC in Arts in Hotel and Hospitality Studies L6 Yr 1 Sem 1
+G-OHOSG61 HC in Arts in Hotel and Hospitality Studies L6 Yr 1 Sem 2
+G-OREMG71 BB in Retail Mgmt L7 Yr 1 Sem 1
+G-OREMG71 BB in Retail Mgmt L7 Yr 1 Sem 2
+G-OREMG72 BB in Retail Mgmt L7 Yr 2 Sem 3
+G-OREMG72 BB in Retail Mgmt L7 Yr 2 Sem 4
+G-ORETG73 BB in Retail & Customer Service Mgmt L7 Yr 3 Sem 6

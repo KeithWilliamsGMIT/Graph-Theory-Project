@@ -1,0 +1,34 @@
+G-CELEC1-4A National Advanced Craft Certificate in Electrical Installation 4A
+G-CELEC1-4B National Advanced Craft Certificate in Electrical Installation 4B
+G-CELEC2-6A National Advanced Craft Certificate in Electrical Installation 6A
+G-CELEC2-6B National Advanced Craft Certificate in Electrical Installation 6B
+G-ECOEG84 BEng Computer & Electronic Eng L8 Yr 4
+G-ECOEG85 BEng Computer & Electronic Eng L8 Yr 5 Sem 10
+G-ECOEG85 BEng Computer & Electronic Eng L8 Yr 5 Sem 9
+G-ECOLG71-A BEng Computer & Electronic Eng Gr A L7 Yr 1 Sem 1
+G-ECOLG71-A BEng Computer & Electronic Eng Gr A L7 Yr 1 Sem 2
+G-ECOLG71-B BEng Computer & Electronic Eng Gr B L7 Yr 1 Sem 1
+G-ECOLG71-B2 BEng Computer & Electronic Eng Gr B L7 Yr 1 Sem 2
+G-ECOLG71-C BEng Computer & Electronic Eng Gr C L7 Yr 1 Sem 1
+G-ECOLG71-C BEng Computer & Electronic Eng Gr C L7 Yr 1 Sem 2
+G-ECOLG72-A BEng Computer & Electronic Eng Gr A L7 Yr 2 Sem 3
+G-ECOLG72-A BEng Computer & Electronic Eng Gr A L7 Yr 2 Sem 4
+G-ECOLG72-B BEng Computer & Electronic Eng Gr B L7 Yr 2 Sem 3
+G-ECOLG72-B BEng Computer & Electronic Eng Gr B L7 Yr 2 Sem 4
+G-ECOLG72-C BEng Computer & Electronic Eng Gr C L7 Yr 2 Sem 3
+G-ECOLG72-C BEng Computer & Electronic Eng Gr C L7 Yr 2 Sem 4
+G-ECOLG73-A BEng Computer & Electronic Eng Gr A L7 Yr 3 Sem 5
+G-ECOLG73-A BEng Computer & Electronic Eng Gr A L7 Yr 3 Sem 6
+G-ECOLG73-B BEng Computer & Electronic Eng Gr B L7 Yr 3 Sem 5
+G-ECOLG73-B BEng Computer & Electronic Eng Gr B L7 Yr 3 Sem 6
+G-EINAG71 SPA Certificate in Industrial Automation L7 Yr 1
+G-EINAG72 SPA Certificate in Industrial Automation L7 Yr 2
+G-EITNG71 Certificate in IT Networking L7 Yr 1 Sem 1
+G-EITNG71 Certificate in IT Networking L7 Yr 1 Sem 1
+G-EITNG72 Certificate in IT Networking L7 Yr 2 Sem 3
+G-EITNG72 Certificate in IT Networking L7 Yr 2 Sem 3
+G-ESAEG71 BEng in Electrical Services & Automation Eng L7 Yr 1
+G-ESAEG72 BEng in Electrical Services & Automation Eng L7 Yr 2 Sem 3
+G-ESAEG72 BEng in Electrical Services & Automation Eng L7 Yr 2 Sem 4
+G-ESAEG73 BEng in Electrical Services & Automation Eng L7 Yr 3 Sem 5
+G-ESAEG73 BEng in Electrical Services & Automation Eng L7 Yr 3 Sem 6

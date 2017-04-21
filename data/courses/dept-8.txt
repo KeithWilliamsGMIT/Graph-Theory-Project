@@ -1,0 +1,38 @@
+G-EENEG1-F BEng in Energy Eng Gr F Yr 1 Sem 1
+G-EENEG1-H BEng in Energy Eng Gr H Yr 1 Sem 1
+G-EENEG2 BEng in Energy Eng Yr 2 Sem 3
+G-EENEG3 BEng in Energy Eng Yr 3 Sem 5
+G-EENEG71-A BEng in Energy Eng Gr F L7 Yr 1 Sem 2
+G-EENEG71-B BEng in Energy Eng Gr H L7 Yr 1 Sem 2
+G-EENEG72-A BEng in Energy Eng Gr A L7 Yr 2 Sem 4
+G-EENEG73-A BEng in Energy Eng Gr A L7 Yr 3 Sem 6
+G-EENEG84 BEng in Energy Eng L8 Yr 4 Sem 7
+G-EENEG84 BEng in Energy Eng L8 Yr 4 Sem 8
+G-EMECG1-A BEng in Mechanical Eng Gr A Yr 1 Sem 1
+G-EMECG1-B BEng in Mechanical Eng Gr B Yr 1 Sem 1
+G-EMECG1-C BEng in Mechanical Eng Gr C Yr 1 Sem 1
+G-EMECG1-D BEng in Mechanical Eng Gr D Yr 1 Sem 1
+G-EMECG1-E BEng in Mechanical Eng Gr E Yr 1 Sem 1
+G-EMECG1-F BEng in Mechanical Eng Gr F Yr 1 Sem 1
+G-EMECG3-A BEng in Mechanical Eng Gr A Yr 3 Sem 5
+G-EMECG3-B BEng in Mechanical Eng Gr B Yr 3 Sem 5
+G-EMECG3-C BEng in Mechanical Eng Gr C Yr 3 Sem 5
+G-EMECG71-A BEng in Mechanical Eng Gr A L7 Yr 1 Sem 2
+G-EMECG71-B BEng in Mechanical Eng Gr B L7 Yr 1 Sem 2
+G-EMECG71-C BEng in Mechanical Eng Gr C L7 Yr 1 Sem 2
+G-EMECG71-D BEng in Mechanical Eng Gr D L7 Yr 1 Sem 2
+G-EMECG71-E BEng in Mechanical Eng Gr E L7 Yr 1 Sem 2
+G-EMECG72-A BEng in Mechanical Eng Gr A L7 Yr 2 Sem 3
+G-EMECG72-A BEng in Mechanical Eng Gr A L7 Yr 2 Sem 4
+G-EMECG72-B BEng in Mechanical Eng Gr B L7 Yr 2 Sem 3
+G-EMECG72-B BEng in Mechanical Eng Gr B L7 Yr 2 Sem 4
+G-EMECG72-C BEng in Mechanical Eng Gr C L7 Yr 2 Sem 3
+G-EMECG72-C BEng in Mechanical Eng Gr C L7 Yr 2 Sem 4
+G-EMECG72-D BEng in Mechanical Eng Gr D L7 Yr 2 Sem 3
+G-EMECG72-D BEng in Mechanical Eng Gr D L7 Yr 2 Sem 4
+G-EMECG73-A BEng in Mechanical Eng Gr A L7 Yr 3 Sem 6
+G-EMECG73-B BEng in Mechanical Eng Gr B L7 Yr 3 Sem 6
+G-EMECG73-C BEng in Mechanical Eng Gr C L7 Yr 3 Sem 6
+G-EMECG84 BEng in Mechanical Eng L8 Yr 4 Sem 7
+G-EMECG84 BEng in Mechanical Eng L8 Yr 4 Sem 8
+G-EMOME6 NCC in Motor Engineering Phase 6

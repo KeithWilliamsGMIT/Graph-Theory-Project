@@ -1,0 +1,82 @@
+G-SABBG2 BSc in Applied Biology & Biopharmaceutical Sci L7&8 Yr 2 Sem 3
+G-SABBG2 BSc in Applied Biology & Biopharmaceutical Sci L7&8 Yr 2 Sem 4
+G-SABBG3 BSc in Applied Biology & Biopharmaceutical Sci L7&8 Yr 3 Sem 5
+G-SABBG3 BSc in Applied Biology & Biopharmaceutical Sci L7&8 Yr 3 Sem 6
+G-SABBG84 BSc in Applied Biology & Biopharmaceutical Sci L8 Yr 4 Sem 7
+G-SABBG84 BSc in Applied Biology & Biopharmaceutical Sci L8 Yr 4 Sem 8
+G-SAFMG2 BSc in Applied Freshwater & Marine Biology Yr 2 Sem 3
+G-SAFMG3 BSc in Applied Freshwater & Marine Biology Yr 3 Sem 5
+G-SAFMG72 BSc in Applied Freshwater & Marine Biology L7 Yr 2 Sem 4
+G-SAFMG73 BSc in Applied Freshwater & Marine Biology L7 Yr 3 Sem 6
+G-SAFMG82 BSc in Applied Freshwater & Marine Biology L8 Yr 2 Sem 3
+G-SAFMG82 BSc in Applied Freshwater & Marine Biology L8 Yr 2 Sem 4
+G-SAFMG83 BSc (Hons) in Applied Freshwater & Marine Biology L8 Yr 3 Sem 5
+G-SAFMG83 BSc in Applied Freshwater & Marine Biology L8 Yr 3 Sem 6
+G-SAFMG84 BSc in Applied Freshwater & Marine Biology L8 Yr 4 Sem 7
+G-SAFMG84 BSc in Applied Freshwater & Marine Biology L8 Yr 4 Sem 8
+G-SAGRG1 BSc in Agriculture Yr 1 Sem 1
+G-SAGRG2 BSc in Rural Enterprise & Environmental Mgmt Yr 2 Sem 3
+G-SAGRG4 BSc in Rural Enterprise & Environmental Mgmt L8 Yr 4 Sem 7
+G-SAGRG71 BSc in Agriculture L7 Yr 1 Sem 2
+G-SAGRG72 BSc in Rural Enterprise & Environmental Mgmt L7 Yr 2 Sem 4
+G-SAGRG73 BSc in Rural Enterprise & Environmental Mgmt L7 Yr 3 Sem 5
+G-SAGRG73 BSc in Rural Enterprise & Environmental Mgmt L7 Yr 3 Sem 6
+G-SAGRG84 BSc in Rural Enterprise & Environmental Mgmt L8 Yr 4 Sem 8
+G-SCHPG2 BSc in Chemical & Pharmaceutical Science Yr 2 Sem 3
+G-SCHPG3 BSc in Chemical & Pharmaceutical Science Yr 3 Sem 5
+G-SCHPG3 BSc in Chemical & Pharmaceutical Science Yr 3 Sem 5
+G-SCHPG4 BSc in Chemical & Pharmaceutical Science Yr 4
+G-SCHPG72 BSc in Chemical & Pharmaceutical Science L7&8 Yr 2 Sem 4
+G-SCHPG82 BSc (Hons) in Chemical & Pharmaceutical Science L8 Yr 2 Sem 4
+G-SCMLG81 BSc in Medical Science L8 Yr 1 Sem 1
+G-SCMLG81 BSc in Medical Science L8 Yr 1 Sem 2
+G-SCMLG82 BSc in Medical Science L8 Yr 2 Sem 3
+G-SCMLG82 BSc in Medical Science L8 Yr 2 Sem 4
+G-SCMLG83 BSc in Medical Science L8 Yr 3
+G-SCMLG84 BSc in Medical Science L8 Yr 4
+G-SCOMG1 BSc Common Science Gr A Yr 1 Sem 1
+G-SCOMG1 BSc Common Science Gr A-K Yr 1 Sem 1
+G-SCOMG1 BSc Common Science Gr B Yr 1 Sem 1
+G-SCOMG1 BSc Common Science Gr C Yr 1 Sem 1
+G-SCOMG1 BSc Common Science Gr D Yr 1 Sem 1
+G-SCOMG1 BSc Common Science Gr E Yr 1 Sem 1
+G-SCOMG1 BSc Common Science Gr F Yr 1 Sem 1
+G-SCOMG1 BSc Common Science Gr G Yr 1 Sem 1
+G-SCOMG1 BSc Common Science Gr H Yr 1 Sem 1
+G-SCOMG1 BSc Common Science Gr I Yr 1 Sem 1
+G-SCOMG1 BSc Common Science Gr J Yr 1 Sem 1
+G-SCOMG1 BSc Common Science Gr K Yr 1 Sem 1
+G-SCOMG1 BSc Common Science Gr L Yr 1 Sem 1
+G-SCOMG1 BSc Common Science Gr M Yr 1 Sem 1
+G-SCOMG1 BSc Common Science Gr N Yr 1 Sem 1
+G-SCOMG71 BSc (Ord): Common Science Gr A L7 Yr 1 Sem 2
+G-SCOMG71 BSc (Ord): Common Science Gr A-K L7 Yr 1 Sem 2
+G-SCOMG71 BSc (Ord): Common Science Gr B L7 Yr 1 Sem 2
+G-SCOMG71 BSc (Ord): Common Science Gr C  L7 Yr 1 Sem 2
+G-SCOMG71 BSc (Ord): Common Science Gr D L7 Yr 1 Sem 2
+G-SCOMG71 BSc (Ord): Common Science Gr E L7 Yr 1 Sem 2
+G-SCOMG71 BSc (Ord): Common Science Gr F L7 Yr 1 Sem 2
+G-SCOMG71 BSc (Ord): Common Science Gr G L7 Yr 1 Sem 2
+G-SCOMG71 BSc (Ord): Common Science Gr H L7 Yr 1 Sem 2
+G-SCOMG71 BSc (Ord): Common Science Gr I L7 Yr 1 Sem 2
+G-SCOMG71 BSc (Ord): Common Science Gr J L7 Yr 1 Sem 2
+G-SCOMG71 BSc (Ord): Common Science Gr K L7 Yr 1 Sem 2
+G-SCOMG71 BSc (Ord): Common Science Gr L L7 Yr 1 Sem 2
+G-SCOMG71 BSc (Ord): Common Science Gr M L7 Yr 1 Sem 2
+G-SCOMG71 BSc (Ord): Common Science Gr N L7 Yr 1 Sem 2
+G-SFIEG95 Certificate in Food Innovation and Entrepreneurship L9
+G-SFSCG82 BSc in Forensic Science. & Analysis L8 Yr 2 Sem 3
+G-SFSCG82 BSc in Forensic Science. & Analysis L8 Yr 2 Sem 4
+G-SFSCG83 BSc in Forensic Science. & Analysis L8 Yr 3 Sem 5
+G-SFSCG84 BSc in Forensic Science. & Analysis L8 Yr 4 Sem 7
+G-SFSCG84 BSc in Forensic Science. & Analysis L8 Yr 4 Sem 8
+G-SMBCC95 MSc The Erasmus Mundus Biodiversity & Conservation (EMBC) Yr 5
+G-SMEDG61 Certificate in Medical Device Technology L6 Yr 1
+G-SPHYG2 BSc in Physics & Instrumentation L7&8 Yr 2 Sem 4
+G-SPHYG2 BSc in Physics & Instrumentation Yr 2 Sem 3
+G-SPHYG3 BSc in Physics & Instrumentation L7&8 Yr 3
+G-SPHYG82 BSc (Hons) in Physics & Instrumentation L8 Yr 2 Sem 4
+G-SPHYG84 BSc in Physics & Instrumentation L8 Yr 4 Sem 8
+G-SPHYG84 BSc in Physics & Instrumentation Yr 4 Sem 7
+G-SSESG81 BSc (Honours) in Sport and Exercise Science L8 Yr 1 Sem 1
+G-SSESG81 BSc (Honours) in Sport and Exercise Science L8 Yr 1 Sem 2
