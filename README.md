@@ -119,6 +119,8 @@ In this graph the vertices could represent classes. The edges could represent co
 Sources: *[Wikipedia](https://en.wikipedia.org/wiki/Graph_coloring)*
 
 #### Using graph theory to model this problem
+Before starting the design it's important to be aware of the type of data thats being handled and how this system will be used. Generally, timetabling systems are updated seldomly but read frequently. Also, the queries that will be run on the data must be kept in mind.
+
 Given the list of data given above that needs to be stored, it seems intuitive to make each bullet point a label in the graph and the data in the paragraphs properties of those nodes. Therefore there will be ten labels which are COLLEGE, CAMPUS, ROOM, DEPARTMENT, COURSE, MODULE, YEAR_GROUP, STUDENT_GROUP, LECTURER and CLASS.
 
 Then the problem emerges how to connect or relate these nodes to each other. This is less straight forward. When designing the graph I started with the college node and worked down to the class nodes as shown in the following diagram.
@@ -168,8 +170,13 @@ A list of courses is also available on the same page as the departments. This li
 
 Converting this list to a CSV file isn't as straight forward as there is no link between the department and course. I selected each department on the [GMIT timetable website](http://timetable.gmit.ie/) and viewed each page source individually. I then copied them to seperated files called `dept-n.txt` and used the Brackets editor to remove the option tags and `&amp;` codes from the files. Then, using a python script I was able to combine these files into a single `courses.csv` file, getting the department name from the `departments.csv` file created earlier. This file can then be loaded into Neo4J. To run this script go to the `data/courses` using a terminal and type python `course-parser.py`.
 
+##### Other data
+Unforetunately, all other data was too difficult to automatically obtain. Instead I manually created a small dataset for the lecturers, modules and classes relating to the BSc in Computing in Software Development L7 module only to demonstrate the systems functionality.
+
 #### Adding the data to the database
-Once the data is obtained we can start storing it in the database. The first node that needs to be created is the college node.
+Once the data is obtained we can start storing it in the database. This section will involve importing the CSV files created earlier into the Neo4J database. In order to do this you must copy these files into to a folder found at `/usr/share/neo4j/import` if you are running on Linux.
+
+The first node that needs to be created is the college node.
 
 ```
 CREATE (c:College {name: "GMIT"});
@@ -200,7 +207,7 @@ MERGE (c:Campus { name: line.campus })
 MERGE (c)-[:HAS]->(d);
 ```
 
-Using a similar query to the one above we can create all COURSE and YEAR_GROUP nodes.
+Using a similar query to the one above we can create all course, year group and student group nodes.
 
 ```
 LOAD CSV WITH HEADERS FROM "file:///courses.csv" AS line
@@ -209,7 +216,23 @@ MERGE (c:Course { course_code: line.course_code })
 SET c.title = line.title
 SET c.level = line.level
 MERGE (d)-[:RUNS]->(c)
-MERGE (c)-[:ENROLLS]->(y:Year_Group { year_code: line.year_code, year: line.year });
+MERGE (c)-[:ENROLLS]->(y:Year_Group { year_code: line.year_code, year: line.year })
+MERGE (y)-[:HAS]->(s:Student_Group { name: line.group_name, nunmer_of_students: 25 })
+```
+
+Next create the lecturers for the Computer Science and Applied Physics course.
+
+```
+LOAD CSV WITH HEADERS FROM "file:///lecturers.csv" AS line
+MERGE (l:Lecturer { id: line.id, name: line.name, work_hours: line.work_hours })
+```
+
+Create modules for Computer Science and Applied Physics course.
+
+```
+LOAD CSV WITH HEADERS FROM "file:///modules.csv" AS line
+MATCH (c:Course { course_code: "KSOFG", level: "7" })-[r]->(y:Year_Group { year: "3" })
+CREATE (y)-[:STUDIES { semester: line.semester }]->(:Module { module_code: line.module_code, name: line.name });
 ```
 
 Use the following query to view the entire graph. The first line increases the limit of nodes that can be returned from the default 300 to 1000.
@@ -222,6 +245,7 @@ MATCH (n)-[r]->(m) RETURN n, r, m;
 ### <a id="s6"></a>Using the system
 
 ### <a id="s7"></a>Conclusion
+The timetabling problem proved to be a very difficult problem to solve due to the high level of contraints and connectivity within the data and its non-linear nature. This makes graph theory a suitable candidate for such a modeling such a problem.
 
 References:
 + [Importing CSV files with Cypher](https://neo4j.com/docs/developer-manual/current/get-started/cypher/importing-csv-files-with-cypher/)

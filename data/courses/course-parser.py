@@ -4,7 +4,7 @@ import re
 # CSV file writter
 out = csv.writer(open("courses.csv", "w"), delimiter=',',quoting=csv.QUOTE_ALL)
 
-headerRow = ["department", "course_code", "title", "level", "year", "year_code", "semester"]
+headerRow = ["department", "course_code", "title", "level", "year", "year_code", "semester", "group_name"]
 out.writerow(headerRow)
 i = 1
 
@@ -53,16 +53,16 @@ with open('../departments.csv') as deptFile:
                 semester = semester_stings[len(semester_stings) - 1]
                 title = title.split(" Sem " + str(semester))[0]
             
-            # Group
+            # Group (Default to A)
             group_stings = re.findall("^.*\sGr\s(\w)\s", module)
-            group = ""
+            group_name = "A"
 
             if len(group_stings) > 0:
-                group = group_stings[len(group_stings) - 1]
-                title = title.replace("Gr " + str(group), '')
+                group_name = group_stings[len(group_stings) - 1]
+                title = title.replace("Gr " + str(group_name), '')
 
             # Remove leading and trailing whitespaces
             title = title.strip()
 
-            row = [department, course_code, title, level, year, year_code, semester, group]
+            row = [department, course_code, title, level, year, year_code, semester, group_name]
             out.writerow(row)
