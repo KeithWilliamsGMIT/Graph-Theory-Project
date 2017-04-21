@@ -4,7 +4,7 @@ import re
 # CSV file writter
 out = csv.writer(open("courses.csv", "w"), delimiter=',',quoting=csv.QUOTE_ALL)
 
-headerRow = ["department", "course_code", "title", "level", "year", "semester"]
+headerRow = ["department", "course_code", "title", "level", "year", "year_code", "semester"]
 out.writerow(headerRow)
 i = 1
 
@@ -18,11 +18,13 @@ with open('../departments.csv') as deptFile:
             modules = courseFile.readlines()
         
         # Increment i so the next dept file is read on the next iteration
-        ++i
+        i = i + 1
         
         for module in modules:
-            # Course Code
+            # Course Code and Year Code
             course_code = re.findall("^.*-(.+?)(?= )", module)[0]
+            year_code = course_code[-2:]
+            course_code = course_code[:-2]
 
             # Title
             title = re.findall("(?= )(.*)", module)[0]
@@ -50,9 +52,17 @@ with open('../departments.csv') as deptFile:
             if len(semester_stings) > 0:
                 semester = semester_stings[len(semester_stings) - 1]
                 title = title.split(" Sem " + str(semester))[0]
+            
+            # Group
+            group_stings = re.findall("^.*\sGr\s(\w)\s", module)
+            group = ""
+
+            if len(group_stings) > 0:
+                group = group_stings[len(group_stings) - 1]
+                title = title.replace("Gr " + str(group), '')
 
             # Remove leading and trailing whitespaces
             title = title.strip()
 
-            row = [department, course_code, title, level, year, semester]
+            row = [department, course_code, title, level, year, year_code, semester, group]
             out.writerow(row)

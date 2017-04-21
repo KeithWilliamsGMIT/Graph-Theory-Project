@@ -187,7 +187,8 @@ MERGE (c)-[:HAS]->(r);
 Then to create relationships between the college and campus nodes.
 
 ```
-MATCH (col:College {name: "GMIT"}), (c:Campus) CREATE (col)-[:Has]->(c);
+MATCH (col:College {name: "GMIT"}), (c:Campus)
+CREATE (col)-[:Has]->(c);
 ```
 
 Next, create department nodes and the relationships between the new departments and the campus nodes to which they belong.
@@ -197,6 +198,23 @@ LOAD CSV WITH HEADERS FROM "file:///departments.csv" AS line
 MERGE (d:Department { name: line.name })
 MERGE (c:Campus { name: line.campus })
 MERGE (c)-[:HAS]->(d);
+```
+
+Using a similar query to the one above we can create all COURSE and YEAR_GROUP nodes.
+
+```
+LOAD CSV WITH HEADERS FROM "file:///courses.csv" AS line
+MATCH (d:Department { name: line.department })
+MERGE (c:Course { title: line.title, course_code: line.course_code, level: line.level })
+MERGE (d)-[:RUNS]->(c)
+MERGE (c)-[:ENROLLS]->(y:Year_Group { year_code: line.year_code, year: line.year });
+```
+
+Use the following query to view the entire graph. The first line increases the limit of nodes that can be returned from the default 300 to 1000.
+
+```
+:config initialNodeDisplay:1000
+MATCH (n)-[r]->(m) RETURN n, r, m;
 ```
 
 ### <a id="s6"></a>Using the system
