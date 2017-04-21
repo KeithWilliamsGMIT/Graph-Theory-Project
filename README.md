@@ -205,7 +205,9 @@ Using a similar query to the one above we can create all COURSE and YEAR_GROUP n
 ```
 LOAD CSV WITH HEADERS FROM "file:///courses.csv" AS line
 MATCH (d:Department { name: line.department })
-MERGE (c:Course { title: line.title, course_code: line.course_code, level: line.level })
+MERGE (c:Course { course_code: line.course_code })
+SET c.title = line.title
+SET c.level = line.level
 MERGE (d)-[:RUNS]->(c)
 MERGE (c)-[:ENROLLS]->(y:Year_Group { year_code: line.year_code, year: line.year });
 ```
