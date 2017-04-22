@@ -10,7 +10,7 @@ This document is divided into seven sections
 7. [Conclusion](#s7)
 
 ### <a id="s1"></a>Introduction
-This is my 3rd year graph theory project. For this project I was required to design a database for a timetabling system for a third level institute. The database stores information about student groups, classrooms, lecturers and work hours.
+This is my 3rd year graph theory project. For this project I was required to design a database for a timetabling system for a third level institute. The database stores data about student groups, classrooms, lecturers, work hours and other data relating to timetables.
 
 ### <a id="s2"></a>Understanding the problem
 The timetabling problem, in its simplest form, is trying to allocate shared resources to a given timeslot. These resources include lecturers, rooms and student groups. These resources are limited and must be scheduled in such a way that they are uniquely allocated per timeslot, meaning a lecturer can only teach one class at a time, a student group can only attend one class at a time and a room can only be used for a single class at a time. The more resources that must be scheduled the more difficult this problem gets.
@@ -133,7 +133,7 @@ This design would utilise all of the data structures offered by Neo4J. This solu
 Now that the database design is complete a prototype database can be built to demonstrate how it might be used.
 
 #### Obtaining the data
-To populate the prototype database, data is needed. Finding and extracting this data was more difficult than anticipated due to the implementation of GMIT's current timetabling system from which most of the data was extracted from. In order to prperly test this databse design I tried to accumulate as much data as possible.
+To populate the prototype database, data is needed. Finding and extracting this data was more difficult than anticipated due to the implementation of GMIT's current timetabling system from which most of the data was extracted from. In order to properly test this database design I tried to accumulate as much data as possible.
 
 ##### Rooms
 To get a list of rooms go to the [GMIT timetable website](http://timetable.gmit.ie/) and them choose Academic year 16/17, Rooms and then right click and choose the View Source option. The list of rooms will be available in the following format.
@@ -153,7 +153,7 @@ To get a list of departments, again go to the [GMIT timetable website](http://ti
 <option value="9F6C92789472CF950AD128E4B39661ED">Galway Campus - Centre for the Creative Arts and Media</option>
 ```
 
-The data for each room is within a pair of opening and closing option tags. Because the list of departments is a small dataset there would be little benefit to writting a python script to parse it into the correct format. Instead I edited the in brackets with the help of regular expressions to produce a list in the following format.
+The data for each room is within a pair of opening and closing option tags. Because the list of departments is a small dataset there would be little benefit to writing a python script to parse it into the correct format. Instead I edited the in brackets with the help of regular expressions to produce a list in the following format.
 
 ```
 "Galway","Dept of Computer Science & Applied Physics"
@@ -171,18 +171,18 @@ A list of courses is also available on the same page as the departments. This li
 Converting this list to a CSV file isn't as straight forward as there is no link between the department and course. I selected each department on the [GMIT timetable website](http://timetable.gmit.ie/) and viewed each page source individually. I then copied them to seperated files called `dept-n.txt` and used the Brackets editor to remove the option tags and `&amp;` codes from the files. Then, using a python script I was able to combine these files into a single `courses.csv` file, getting the department name from the `departments.csv` file created earlier. This file can then be loaded into Neo4J. To run this script go to the `data/courses` using a terminal and type python `course-parser.py`.
 
 ##### Other data
-Unforetunately, all other data was too difficult to automatically obtain. Instead I manually created a small dataset for the lecturers, modules and classes relating to the BSc in Computing in Software Development L7 module only to demonstrate the systems functionality.
+Unfortunately, all other data was too difficult to automatically obtain. Instead I manually created a small dataset for the lecturers, modules and classes relating to the BSc in Computing in Software Development L7 module only to demonstrate the systems functionality.
 
 #### Adding the data to the database
 Once the data is obtained we can start storing it in the database. This section will involve importing the CSV files created earlier into the Neo4J database. In order to do this you must copy these files into to a folder found at `/usr/share/neo4j/import` if you are running on Linux.
 
-The first node that needs to be created is the college node.
+The first node that needs to be created is the college node. The query will create a single college node with a property name with the value 'GMIT'.
 
 ```
 CREATE (c:College {name: "GMIT"});
 ```
 
-Next create the room and campus nodes from the `rooms.csv` file created earlier, as shown below.
+Next create the room and campus nodes from the `rooms.csv` file created earlier, as shown below. This query first loads the `rooms.csv` from the `import` folder. This query is read line by line, using the alias `line` to reference the line of data. To retrieve data from the CSV file use the alias line followed and the column header, separated by a period. For each line we use the `MERGE` keyword to create a room node with the name and capacity specified in the current line of the CSV file if it does not already exist. We do the sames for the campus nodes and the relationship between the campus and the room.
 
 ```
 LOAD CSV WITH HEADERS FROM "file:///rooms.csv" AS line
@@ -191,14 +191,14 @@ MERGE (c:Campus { name: line.campus })
 MERGE (c)-[:HAS]->(r);
 ```
 
-Then to create relationships between the college and campus nodes.
+Then, to create relationships between the college and campus nodes, use the `MATCH` keyword to find the college node create in the first query and all the campus nodes. Using `CREATE` we can then create a relationship between the college node and all the campus nodes.
 
 ```
 MATCH (col:College {name: "GMIT"}), (c:Campus)
 CREATE (col)-[:Has]->(c);
 ```
 
-Next, create department nodes and the relationships between the new departments and the campus nodes to which they belong.
+Next, create department nodes and the relationships between the new departments and the campus nodes to which they belong. This data will be loaded from the `departments.csv`, similar as to how the room data was loaded. Again, using the `MERGE` keyword, create the department and campus nodes using the data from the `departments.csv` file if they do not already exist and then create a relationship between them.
 
 ```
 LOAD CSV WITH HEADERS FROM "file:///departments.csv" AS line
@@ -207,7 +207,7 @@ MERGE (c:Campus { name: line.campus })
 MERGE (c)-[:HAS]->(d);
 ```
 
-Using a similar query to the one above we can create all course, year group and student group nodes.
+Using a similar query to the one above we can create all course, year group and student group nodes. This is a slightly longer query as the `courses.csv` contains a lot of different data. First, `USING` the match keyword, find the department node with a name value that matches the department column in the line of data. Next, using `MERGE`, check if a course node with the given course_code exists. If not, create it. Then set the properties title and line. It's important to set these after using merge and not in it as some courses might have the same course code but a different title or level, which would lead to duplicate courses. Next, create a relationship between the department and course, course and year group and year group and student group nodes. If the year and student group nodes do not exist then create them.
 
 ```
 LOAD CSV WITH HEADERS FROM "file:///courses.csv" AS line
@@ -220,14 +220,14 @@ MERGE (c)-[:ENROLLS]->(y:Year_Group { year_code: line.year_code, year: line.year
 MERGE (y)-[:HAS]->(s:Student_Group { name: line.group_name, nunmer_of_students: 25 })
 ```
 
-Next create the lecturers for the Computer Science and Applied Physics course.
+Next create the lecturers for the Computer Science and Applied Physics course, using the data from the `lecturers.csv` file.
 
 ```
 LOAD CSV WITH HEADERS FROM "file:///lecturers.csv" AS line
 MERGE (l:Lecturer { id: line.id, name: line.name, work_hours: line.work_hours })
 ```
 
-Create modules for Computer Science and Applied Physics course.
+Create modules for Computer Science and Applied Physics course, using the data from the `modules.csv` file.
 
 ```
 LOAD CSV WITH HEADERS FROM "file:///modules.csv" AS line
@@ -249,3 +249,4 @@ The timetabling problem proved to be a very difficult problem to solve due to th
 
 References:
 + [Importing CSV files with Cypher](https://neo4j.com/docs/developer-manual/current/get-started/cypher/importing-csv-files-with-cypher/)
++ [GMIT timetable website](http://timetable.gmit.ie/)
