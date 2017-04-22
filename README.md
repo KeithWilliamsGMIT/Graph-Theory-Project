@@ -133,7 +133,7 @@ This design would utilise all of the data structures offered by Neo4J. This solu
 Now that the database design is complete a prototype database can be built to demonstrate how it might be used.
 
 #### Obtaining the data
-To populate the prototype database, data is needed. Finding and extracting this data was more difficult than anticipated due to the implementation of GMIT's current timetabling system from which most of the data was extracted from. In order to properly test this database design I tried to accumulate as much data as possible.
+To populate the prototype database, data is needed. Finding and extracting this data was more difficult than anticipated due to the implementation of GMIT's current timetabling system from which most of the data was extracted. In order to properly test this database design I tried to accumulate as much data as possible.
 
 ##### Rooms
 To get a list of rooms go to the [GMIT timetable website](http://timetable.gmit.ie/) and them choose Academic year 16/17, Rooms and then right click and choose the View Source option. The list of rooms will be available in the following format.
@@ -171,7 +171,7 @@ A list of courses is also available on the same page as the departments. This li
 Converting this list to a CSV file isn't as straight forward as there is no link between the department and course. I selected each department on the [GMIT timetable website](http://timetable.gmit.ie/) and viewed each page source individually. I then copied them to seperated files called `dept-n.txt` and used the Brackets editor to remove the option tags and `&amp;` codes from the files. Then, using a python script I was able to combine these files into a single `courses.csv` file, getting the department name from the `departments.csv` file created earlier. This file can then be loaded into Neo4J. To run this script go to the `data/courses` using a terminal and type python `course-parser.py`.
 
 ##### Other data
-Unfortunately, all other data was too difficult to automatically obtain. Instead I manually created a small dataset for the lecturers, modules and classes relating to the BSc in Computing in Software Development L7 module only to demonstrate the systems functionality.
+Unfortunately, all other data was too difficult to automatically obtain due to inconsistant data such as room and module names. Instead I manually created small datasets for the lecturers, modules and classes relating to the BSc in Computing in Software Development L7 module only to demonstrate the systems functionality.
 
 #### Adding the data to the database
 Once the data is obtained we can start storing it in the database. This section will involve importing the CSV files created earlier into the Neo4J database. In order to do this you must copy these files into to a folder found at `/usr/share/neo4j/import` if you are running on Linux.
@@ -217,7 +217,7 @@ SET c.title = line.title
 SET c.level = line.level
 MERGE (d)-[:RUNS]->(c)
 MERGE (c)-[:ENROLLS]->(y:Year_Group { year_code: line.year_code, year: line.year })
-MERGE (y)-[:HAS]->(s:Student_Group { name: line.group_name, nunmer_of_students: 25 })
+MERGE (y)-[:HAS]->(s:Student_Group { name: line.group_name, nunmer_of_students: 25 });
 ```
 
 Next create the lecturers for the Computer Science and Applied Physics course, using the data from the `lecturers.csv` file.
@@ -225,28 +225,47 @@ Next create the lecturers for the Computer Science and Applied Physics course, u
 ```
 LOAD CSV WITH HEADERS FROM "file:///lecturers.csv" AS line
 MERGE (l:Lecturer { id: line.id, name: line.name, work_hours: line.work_hours })
+MERGE (d:Department { name: line.department })
+MERGE (d)-[:EMPLOYS]->(l);
 ```
 
-Create modules for Computer Science and Applied Physics course, using the data from the `modules.csv` file.
+Create modules for Computer Science and Applied Physics course, using the data from the `modules.csv` file. This file contains an array of lecturer names which will have to be handled. To do this, first use substring to remove the square brackets. Next, split the array using a comma as a delimiter. Then, use the `UNWIND` keyword to sperate the array into muliple rows of data. Next, use `MATCH` to find the course using the `course_code` property and from that find the 3rd year node. Create the new module node and a relation between the year group and it using the data in the `modules.csv` file. Finally, create a `TEACHES` relationship between the lecturer and module. Note that it is not a good idea to find the lecturer by name, however, staff ids were not available.
 
 ```
 LOAD CSV WITH HEADERS FROM "file:///modules.csv" AS line
+WITH line, split(substring(line.lecturers, 1, length(line.lecturers) -2), ",") AS lecturers 
+UNWIND lecturers AS lecturer_name
 MATCH (c:Course { course_code: "KSOFG", level: "7" })-[r]->(y:Year_Group { year: "3" })
-CREATE (y)-[:STUDIES { semester: line.semester }]->(:Module { module_code: line.module_code, name: line.name });
+MERGE (y)-[:STUDIES { semester: line.semester }]->(m:Module { module_code: line.module_code, name: line.name })
+MERGE (l:Lecturer { name: lecturer_name })
+MERGE (l)-[:TEACHES]->(m);
 ```
 
-Use the following query to view the entire graph. The first line increases the limit of nodes that can be returned from the default 300 to 1000.
+Finally, create the class nodes from the data in the `classes.csv` file.
 
 ```
-:config initialNodeDisplay:1000
+LOAD CSV WITH HEADERS FROM "file:///classes.csv" AS line
+MATCH (r:Room { name: line.room })
+MATCH (m:Module { name: line.module_name })
+CREATE (cl:Class { day: line.day, start: line.start, end: line.end, group: line.group_name, type: line.type })
+CREATE (m)-[:HAS]->(cl)
+CREATE (r)-[:HOSTS]->(cl);
+```
+
+Use the following query to view the entire graph. The first line increases the limit of nodes that can be returned from the default 300 to 1200.
+
+```
+:config initialNodeDisplay:1200
 MATCH (n)-[r]->(m) RETURN n, r, m;
 ```
 
 ### <a id="s6"></a>Using the system
 
 ### <a id="s7"></a>Conclusion
-The timetabling problem proved to be a very difficult problem to solve due to the high level of contraints and connectivity within the data and its non-linear nature. This makes graph theory a suitable candidate for such a modeling such a problem.
+The timetabling problem proved to be a very difficult problem to solve due to the high level of contraints and connectivity within the data and its non-linear nature. This makes graph theory a suitable candidate for modeling such a problem, over other types of NoSQL databse. I found the Neo4J web interface very useful for visualising the data. This project provided an opportunity to learn more about Neo4J and graph databases in general. It allowed me to experiment with different techniques for designing a graph databases, creating data in Neo4J and writing cypher queries.
 
 References:
 + [Importing CSV files with Cypher](https://neo4j.com/docs/developer-manual/current/get-started/cypher/importing-csv-files-with-cypher/)
++ [Importing CSV files containing array](https://dzone.com/articles/neo4j-load-csv-processing)
 + [GMIT timetable website](http://timetable.gmit.ie/)
++ [Gravizo was used to draw graphs](https://g.gravizo.com/)
