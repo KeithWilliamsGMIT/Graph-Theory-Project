@@ -133,7 +133,7 @@ This design would utilise all of the data structures offered by Neo4J. This solu
 Now that the database design is complete a prototype database can be built to demonstrate how it might be used.
 
 #### Obtaining the data
-To populate the prototype database, data is needed. Finding and extracting this data was more difficult than anticipated due to the implementation of GMIT's current timetabling system from which most of the data was extracted. In order to properly test this database design I tried to accumulate as much data as possible.
+To populate the prototype database, data is needed. Finding and extracting this data was more difficult than anticipated due to the implementation of GMIT's current timetabling system from which most of the data was extracted. In order to properly test this database design I tried to accumulate as much data as possible. However, this is only test data. It is not 100% complete and may contain minor inconsistancies.
 
 ##### Rooms
 To get a list of rooms go to the [GMIT timetable website](http://timetable.gmit.ie/) and them choose Academic year 16/17, Rooms and then right click and choose the View Source option. The list of rooms will be available in the following format.
@@ -217,7 +217,7 @@ SET c.title = line.title
 SET c.level = line.level
 MERGE (d)-[:RUNS]->(c)
 MERGE (c)-[:ENROLLS]->(y:Year_Group { year_code: line.year_code, year: line.year })
-MERGE (y)-[:HAS]->(s:Student_Group { name: line.group_name, nunmer_of_students: 25 });
+MERGE (y)-[:HAS]->(s:Student_Group { name: line.group_name, number_of_students: 25 });
 ```
 
 Next create the lecturers for the Computer Science and Applied Physics course, using the data from the `lecturers.csv` file.
@@ -260,11 +260,45 @@ MATCH (n)-[r]->(m) RETURN n, r, m;
 ```
 
 ### <a id="s6"></a>Using the system
+Now that the prototype database contains all the test data we can use the following queries to retrieve useful data from it.
+
+##### Room timetable
+Find a room by name and return all the classes that are scheduled to be held in that room.
+
+```
+MATCH (room:Room { name: "0484 CR1" })-[r1:HOSTS]->(class:Class)
+MATCH (module:Module)-[r2:HAS]->(class:Class)
+RETURN room, class, module, r1, r2
+ORDER BY class.day + class.start;
+```
+
+##### Year group timetable
+Get year goup by first finding a course by course code and then get the year group by entering the year. Return all modules and classes that the year studies.
+
+```
+MATCH (course:Course { course_code: "KSOFG" })-[r1:ENROLLS]->(year:Year_Group { year: "3" })
+MATCH (year)-[r2:STUDIES]->(module:Module)
+MATCH (module)-[r3:HAS]->(class:Class)
+RETURN course, year, module, class, r1, r2, r3
+ORDER BY class.day + class.start;
+```
+
+##### Lecturer timetable
+Find lecturer by name and return all class that they teach.
+
+```
+MATCH (lecturer:Lecturer { name: "Ian McLoughlin" })-[teaches:TEACHES]->(module:Module)
+MATCH (module)-[r1:HAS]->(class:Class)
+MATCH (room:Room)-[r2:HOSTS]->(class)
+RETURN lecturer, module, class, r1, r2
+ORDER BY class.day + class.start;
+```
 
 ### <a id="s7"></a>Conclusion
-The timetabling problem proved to be a very difficult problem to solve due to the high level of contraints and connectivity within the data and its non-linear nature. This makes graph theory a suitable candidate for modeling such a problem, over other types of NoSQL databse. I found the Neo4J web interface very useful for visualising the data. This project provided an opportunity to learn more about Neo4J and graph databases in general. It allowed me to experiment with different techniques for designing a graph databases, creating data in Neo4J and writing cypher queries.
+This project provided an opportunity to learn more about Neo4J and graph databases in general. It allowed me to experiment with different techniques for designing a graph databases, creating data in Neo4J and writing cypher queries. The timetabling problem proved to be a very difficult problem to solve due to the high level of contraints and connectivity within the data and its non-linear nature. This makes graph theory a suitable candidate for modeling such a problem. I found the Neo4J web interface very useful for visualising the data.
 
 References:
++ [Cypher cheat sheet](http://semanticommunity.info/@api/deki/files/25765/Neo4j_CheatSheet_v3.pdf)
 + [Importing CSV files with Cypher](https://neo4j.com/docs/developer-manual/current/get-started/cypher/importing-csv-files-with-cypher/)
 + [Importing CSV files containing array](https://dzone.com/articles/neo4j-load-csv-processing)
 + [GMIT timetable website](http://timetable.gmit.ie/)
