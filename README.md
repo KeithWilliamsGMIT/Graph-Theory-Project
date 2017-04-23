@@ -182,7 +182,7 @@ Converting this list to a CSV file isn't as straight forward as there is no link
 Unfortunately, all the other data was too difficult to automatically obtain due to inconsistencies such as room and module names. Instead I manually created small datasets for the lecturers, modules and classes from data obtained from both the timetabling website and [LearnOnline](https://learnonline.gmit.ie/). I transformed this data into CSV format using the Brackets editor with the help regular expressions. This data relates only to the BSc in Computing in Software Development L7 course. These files are all within the `data` folder.
 
 #### Adding the data to the database
-Once the data is obtained we can start storing it in the prototype database. This section will involve importing the CSV files created earlier into the Neo4J database. If you are using Linux you must copy these CSV files into a folder found at `/usr/share/neo4j/import` to be able to import them into the database.
+Once the data is obtained we can start storing it in the prototype database. This section will involve importing the CSV files created earlier into the Neo4J database. If you are using Linux you must copy these CSV files into a folder found at `/usr/share/neo4j/import` to be able to import them into the database. Note that running the following queries will create a replica of the database provided in this repository.
 
 The first node that needs to be created is the college node. The following query will create a single college node with a single property called name with the value 'GMIT'.
 
